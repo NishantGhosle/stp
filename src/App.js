@@ -6,10 +6,10 @@ import Footer from "./components/common/Footer";
 import Navbar from "./components/common/Navbar";
 import { HomeThree, AboutTwo, Contact, Services, PageNotFound } from "./pages";
 import { closeDropdown } from "./features/uiSlice";
-import Loader from "./components/common/Loader";
+// import Loader from "./components/common/Loader";
 function App() {
   const [showButton, setShowButton] = useState(false);
-  const [showLoader, setShowLoader] = useState(true);
+  // const [showLoader, setShowLoader] = useState(true);
   const dispatch = useDispatch();
   const route = useLocation();
 
@@ -27,13 +27,13 @@ function App() {
   }, [route]);
 
   // Loader when page is loading
-  window.addEventListener("load", () => {
-    setShowLoader(false);
-  });
+  // window.addEventListener("load", () => {
+  //   setShowLoader(false);
+  // });
 
   return (
     <div>
-      {showLoader && <Loader />}
+      {/* {showLoader && <Loader />} */}
       <Navbar />
       <div
         className="min-h-screen pb-40"
