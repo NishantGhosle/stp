@@ -7,7 +7,6 @@ import {
   closeDropdown,
   closeSidebar,
   openSidebar,
-  toggleDarkMode,
   uiStore,
 } from "../../features/uiSlice";
 import { navLinks } from "../../data/navLinks";
@@ -16,20 +15,21 @@ import SingleLink from "./SingleLink";
 const Navbar = () => {
   const rootDoc = document.querySelector(":root");
   const { darkMode, isSidebarOpen } = useSelector(uiStore);
-  const [showSearchBar, setShowSearchBar] = useState(false);
+  const [showSearchBar] = useState(false);
   const dispatch = useDispatch();
 
-  // Dark mode toggle
-  const handleDarkMode = () => {
-    dispatch(toggleDarkMode());
-  };
-
   // Store darkmode value to localStorage;
+  // useEffect(() => {
+  //   if (darkMode) rootDoc.classList.add("dark");
+  //   else rootDoc.classList.remove("dark");
+  //   localStorage.setItem("Martvilla-theme-mode", JSON.stringify(darkMode));
+  // }, [darkMode]);
   useEffect(() => {
+    const rootDoc = document.documentElement;
     if (darkMode) rootDoc.classList.add("dark");
     else rootDoc.classList.remove("dark");
     localStorage.setItem("Martvilla-theme-mode", JSON.stringify(darkMode));
-  }, [darkMode]);
+  }, [darkMode, rootDoc.classList]);
 
   const handleClose = (e) => {
     if (!e.target.classList.contains("link")) {
