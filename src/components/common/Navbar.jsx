@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import { FiDelete, FiMoon, FiSun } from "react-icons/fi";
+import { FiDelete } from "react-icons/fi";
 import { BiMenu } from "react-icons/bi";
 import { useDispatch, useSelector } from "react-redux";
 import { Link, NavLink } from "react-router-dom";
