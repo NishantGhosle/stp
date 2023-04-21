@@ -19,15 +19,15 @@ module.exports = {
         questrial: "Questrial",
       },
       colors: {
-        primary: "#6B46C1", // Pink
+        primary: "#6B46C1",
         secondary: "#000000",
-        secondaryOrange: "#6B46C1", // Orange
-        "main-bg": "#F5F5F5", // Light gray
-        "main-dark": "#6B46C1", // Purple
-        "card-dark": "#000000", // Dark gray
-        "dark-light": "#2C303E", // Lighter dark gray
-        "hover-color-dark": "#4A5568", // Medium gray
-        dark: "#4C4F5A", // Darker gray
+        secondaryOrange: "#6B46C1",
+        "main-bg": "#F5F5F5",
+        "main-dark": "#6B46C1",
+        "card-dark": "#000000",
+        "dark-light": "#2C303E",
+        "hover-color-dark": "#4A5568",
+        dark: "#4C4F5A",
       },
       gridTemplateColumns: {
         "16-auto": "250px auto",
