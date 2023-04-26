@@ -16,6 +16,11 @@ export const navLinks = [
   },
   {
     id: 4,
+    linkText: "Career",
+    url: "/career",
+  },
+  {
+    id: 5,
     linkText: "Contact",
     url: "/contact",
   },

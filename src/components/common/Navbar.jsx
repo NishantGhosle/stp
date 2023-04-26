@@ -18,12 +18,6 @@ const Navbar = () => {
   const [showSearchBar] = useState(false);
   const dispatch = useDispatch();
 
-  // Store darkmode value to localStorage;
-  // useEffect(() => {
-  //   if (darkMode) rootDoc.classList.add("dark");
-  //   else rootDoc.classList.remove("dark");
-  //   localStorage.setItem("Martvilla-theme-mode", JSON.stringify(darkMode));
-  // }, [darkMode]);
   useEffect(() => {
     const rootDoc = document.documentElement;
     if (darkMode) rootDoc.classList.add("dark");

@@ -39,88 +39,93 @@ const Form = () => {
   };
 
   return (
-    <div className="pt-10 pb-8">
-      {submitSuccess ? (
-        <div
-          className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
-          role="alert"
-        >
-          <strong className="font-bold">Form submitted successfully!</strong>
-        </div>
-      ) : (
-        <form onSubmit={handleSubmit}>
-          <div className="flex-col gap-4 flex-align-center sm:flex-row">
-            <div className="flex-1 w-full">
-              <p>First Name</p>
+    <>
+      <h2 class="text-2xl text-center">Contact form</h2>
+      <div className="pt-10 pb-8">
+        {submitSuccess ? (
+          <div
+            className="bg-green-100 border border-green-400 text-green-700 px-4 py-3 rounded relative"
+            role="alert"
+          >
+            <strong className="font-bold">Form submitted successfully!</strong>
+          </div>
+        ) : (
+          <form onSubmit={handleSubmit}>
+            <div className="flex-col gap-4 flex-align-center sm:flex-row">
+              <div className="flex-1 w-full">
+                <p>First Name</p>
+                <input
+                  type="text"
+                  name="firstName"
+                  value={formData.firstName}
+                  onChange={handleChange}
+                  className={`w-full input ${
+                    formErrors.firstName && "border-red-500"
+                  }`}
+                  placeholder="First Name.."
+                />
+                {formErrors.firstName && (
+                  <p className="text-red-500 text-sm">{formErrors.firstName}</p>
+                )}
+              </div>
+              <div className="flex-1 w-full">
+                <p>Last Name</p>
+                <input
+                  type="text"
+                  name="lastName"
+                  value={formData.lastName}
+                  onChange={handleChange}
+                  className={`w-full input ${
+                    formErrors.lastName && "border-red-500"
+                  }`}
+                  placeholder="Last Name.."
+                />
+                {formErrors.lastName && (
+                  <p className="text-red-500 text-sm">{formErrors.lastName}</p>
+                )}
+              </div>
+            </div>
+            <div className="mt-4">
+              <p>Email Address</p>
               <input
                 type="text"
-                name="firstName"
-                value={formData.firstName}
+                name="email"
+                value={formData.email}
                 onChange={handleChange}
                 className={`w-full input ${
-                  formErrors.firstName && "border-red-500"
+                  formErrors.email && "border-red-500"
                 }`}
-                placeholder="First Name.."
+                placeholder="Email Address.."
               />
-              {formErrors.firstName && (
-                <p className="text-red-500 text-sm">{formErrors.firstName}</p>
+              {formErrors.email && (
+                <p className="text-red-500 text-sm">{formErrors.email}</p>
               )}
             </div>
-            <div className="flex-1 w-full">
-              <p>Last Name</p>
+            <div className="mt-4">
+              <p>Message</p>
               <input
                 type="text"
-                name="lastName"
-                value={formData.lastName}
+                name="message"
+                value={formData.message}
                 onChange={handleChange}
                 className={`w-full input ${
-                  formErrors.lastName && "border-red-500"
+                  formErrors.message && "border-red-500"
                 }`}
-                placeholder="Last Name.."
+                placeholder="Message.."
               />
-              {formErrors.lastName && (
-                <p className="text-red-500 text-sm">{formErrors.lastName}</p>
+              {formErrors.message && (
+                <p className="text-red-500 text-sm">{formErrors.message}</p>
               )}
             </div>
-          </div>
-          <div className="mt-4">
-            <p>Email Address</p>
-            <input
-              type="text"
-              name="email"
-              value={formData.email}
-              onChange={handleChange}
-              className={`w-full input ${formErrors.email && "border-red-500"}`}
-              placeholder="Email Address.."
-            />
-            {formErrors.email && (
-              <p className="text-red-500 text-sm">{formErrors.email}</p>
-            )}
-          </div>
-          <div className="mt-4">
-            <p>Message</p>
-            <input
-              type="text"
-              name="message"
-              value={formData.message}
-              onChange={handleChange}
-              className={`w-full input ${
-                formErrors.message && "border-red-500"
-              }`}
-              placeholder="Message.."
-            />
-            {formErrors.message && (
-              <p className="text-red-500 text-sm">{formErrors.message}</p>
-            )}
-          </div>
-          <div className="mt-4 flex-center-center">
-            <button type="submit" className="btn btn-primary">
-              submit
-            </button>
-          </div>
-        </form>
-      )}
-    </div>
+            <div className="mt-4 flex-center-center">
+              <button type="submit" className="btn btn-primary">
+                submit
+              </button>
+            </div>
+          </form>
+        )}
+      </div>
+    </>
   );
 };
 

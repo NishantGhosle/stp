@@ -4,7 +4,14 @@ import { Routes, Route, useLocation } from "react-router-dom";
 import BackToTopButton from "./components/common/BackToTopButton";
 import Footer from "./components/common/Footer";
 import Navbar from "./components/common/Navbar";
-import { HomeThree, AboutTwo, Contact, Services, PageNotFound } from "./pages";
+import {
+  HomeThree,
+  AboutTwo,
+  Career,
+  Contact,
+  Services,
+  PageNotFound,
+} from "./pages";
 import { closeDropdown } from "./features/uiSlice";
 function App() {
   const [showButton, setShowButton] = useState(false);
@@ -38,6 +45,7 @@ function App() {
           <Route path="/about" element={<AboutTwo />} />
           <Route path="/services" element={<Services />} />
           <Route path="/contact" element={<Contact />} />
+          <Route path="/career" element={<Career />} />
           <Route path="*" element={<PageNotFound />} />
         </Routes>
       </div>
