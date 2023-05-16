@@ -23,7 +23,7 @@ function Career() {
           </div>
         </div>
         <p className="text-xl mt-10">
-          Send your resume at softechproductions@gmail.com
+          Send your resume at <b>productionssoftech@gmail.com</b>
         </p>
       </div>
     </>

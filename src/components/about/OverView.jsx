@@ -5,12 +5,12 @@ const OverView = () => {
         <div className="flex-1 basis-[18rem]">
           <h1 className="heading">what we do</h1>
           <p className="mt-3">
-            At our IT company, we are passionate about technology and helping
+            At our Company, we are passionate about technology and helping
             businesses thrive in the digital age. We specialize in providing a
             wide range of technology solutions to our clients, from custom
             software development to cybersecurity and network solutions.
             <br /> <br />
-            Our team of experts has years of experience working in the
+            Our team of experts has 4 years of experience working in the
             technology industry, and we are committed to delivering innovative
             and reliable solutions that help businesses achieve their goals. We
             work closely with our clients to understand their unique needs and
